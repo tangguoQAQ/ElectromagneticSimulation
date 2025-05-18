@@ -1,0 +1,10 @@
+^N:\DEV\ELECTROMAGNETICSIMULATION\BUILD\CMAKEFILES\E70D80A69FB1875223E8274200922783\GENERATE.STAMP.RULE
+setlocal
+D:\cmake\bin\cmake.exe -SN:/Dev/ElectromagneticSimulation -BN:/Dev/ElectromagneticSimulation/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file N:/Dev/ElectromagneticSimulation/build/ElectromagneticSimulation.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
