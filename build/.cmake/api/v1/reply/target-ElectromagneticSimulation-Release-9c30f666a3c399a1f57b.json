@@ -1,0 +1,304 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Release/ElectromagneticSimulation.exe"
+		},
+		{
+			"path" : "Release/ElectromagneticSimulation.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"target_compile_definitions",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 21,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "UNICODE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_UNICODE"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "N:/Visual Studio/VC/Tools/MSVC/14.39.33519/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "N:/Windows Kits/10/Include/10.0.22000.0"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				4,
+				6,
+				8,
+				9,
+				11,
+				13,
+				15,
+				17
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ElectromagneticSimulation::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /SUBSYSTEM:WINDOWS /INCREMENTAL:NO /subsystem:windows",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "d2d1.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "dwrite.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "ElectromagneticSimulation",
+	"nameOnDisk" : "ElectromagneticSimulation.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				4,
+				6,
+				8,
+				9,
+				11,
+				13,
+				15,
+				17
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1,
+				3,
+				5,
+				7,
+				10,
+				12,
+				14,
+				16,
+				18
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/app_images.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "src/app_images.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/app_scene.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "src/app_scene.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/d2d_resource.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "src/d2d_resource.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/field.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "src/field.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/particle.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "src/particle.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/rect.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "src/rect.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/scene.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "src/scene.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/simulation_app.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "src/simulation_app.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/vector3d.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"path" : "src/vector3d.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

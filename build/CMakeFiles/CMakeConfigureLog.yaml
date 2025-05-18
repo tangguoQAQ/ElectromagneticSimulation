@@ -1,0 +1,139 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/cmake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/cmake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      适用于 .NET Framework MSBuild 版本 17.9.8+b34f75857
+      生成启动时间为 2025/5/17 22:40:04。
+      
+      节点 1 上的项目“N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
+        正在创建目录“Debug\\CompilerIdCXX.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        正在对“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”执行 Touch 任务。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "N:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        N:\\Visual Studio\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /I"N:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        N:\\Visual Studio\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"N:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"N:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "N:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "N:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.exe" "N:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+        或批处理文件。
+        命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "N:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.exe" "N:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+        "G:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "N:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.exe" "N:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=N:\\Visual Studio\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+          0 个警告
+          0 个错误
+      
+      已用时间 00:00:09.60
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        N:/Dev/ElectromagneticSimulation/build/CMakeFiles/3.27.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "D:/cmake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "N:/Dev/ElectromagneticSimulation/build/CMakeFiles/CMakeScratch/TryCompile-sl7t0h"
+      binary: "N:/Dev/ElectromagneticSimulation/build/CMakeFiles/CMakeScratch/TryCompile-sl7t0h"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'N:/Dev/ElectromagneticSimulation/build/CMakeFiles/CMakeScratch/TryCompile-sl7t0h'
+        
+        Run Build Command(s): "N:/Visual Studio/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4ba06.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        适用于 .NET Framework MSBuild 版本 17.9.8+b34f75857
+        生成启动时间为 2025/5/17 22:40:14。
+        
+        节点 1 上的项目“N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sl7t0h\\cmTC_4ba06.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_4ba06.dir\\Debug\\”。
+          已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
+          正在创建目录“N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sl7t0h\\Debug\\”。
+          正在创建目录“cmTC_4ba06.dir\\Debug\\cmTC_4ba06.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_4ba06.dir\\Debug\\cmTC_4ba06.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_4ba06.dir\\Debug\\cmTC_4ba06.tlog\\unsuccessfulbuild”执行 Touch 任务。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "N:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          N:\\Visual Studio\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /I"N:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4ba06.dir\\Debug\\\\" /Fd"cmTC_4ba06.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\cmake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.39.33523 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"N:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4ba06.dir\\Debug\\\\" /Fd"cmTC_4ba06.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\cmake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          N:\\Visual Studio\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sl7t0h\\Debug\\cmTC_4ba06.exe" /INCREMENTAL /ILK:"cmTC_4ba06.dir\\Debug\\cmTC_4ba06.ilk" /NOLOGO /LIBPATH:"N:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"N:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "N:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"N:/Dev/ElectromagneticSimulation/build/CMakeFiles/CMakeScratch/TryCompile-sl7t0h/Debug/cmTC_4ba06.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"N:/Dev/ElectromagneticSimulation/build/CMakeFiles/CMakeScratch/TryCompile-sl7t0h/Debug/cmTC_4ba06.lib" /MACHINE:X64  /machine:x64 cmTC_4ba06.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_4ba06.vcxproj -> N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sl7t0h\\Debug\\cmTC_4ba06.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "N:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sl7t0h\\Debug\\cmTC_4ba06.exe" "N:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_4ba06.dir\\Debug\\cmTC_4ba06.tlog\\cmTC_4ba06.write.1u.tlog" "cmTC_4ba06.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "N:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sl7t0h\\Debug\\cmTC_4ba06.exe" "N:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_4ba06.dir\\Debug\\cmTC_4ba06.tlog\\cmTC_4ba06.write.1u.tlog" "cmTC_4ba06.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "G:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "N:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sl7t0h\\Debug\\cmTC_4ba06.exe" "N:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_4ba06.dir\\Debug\\cmTC_4ba06.tlog\\cmTC_4ba06.write.1u.tlog" "cmTC_4ba06.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_4ba06.dir\\Debug\\cmTC_4ba06.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_4ba06.dir\\Debug\\cmTC_4ba06.tlog\\cmTC_4ba06.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“N:\\Dev\\ElectromagneticSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sl7t0h\\cmTC_4ba06.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:06.05
+        
+      exitCode: 0
+...

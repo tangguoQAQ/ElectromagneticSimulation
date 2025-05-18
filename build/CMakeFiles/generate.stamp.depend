@@ -1,0 +1,22 @@
+# CMake generation dependency list for this directory.
+D:/cmake/share/cmake-3.27/Modules/CMakeCXXInformation.cmake
+D:/cmake/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake
+D:/cmake/share/cmake-3.27/Modules/CMakeGenericSystem.cmake
+D:/cmake/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake
+D:/cmake/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake
+D:/cmake/share/cmake-3.27/Modules/CMakeRCInformation.cmake
+D:/cmake/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake
+D:/cmake/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake
+D:/cmake/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+D:/cmake/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake
+D:/cmake/share/cmake-3.27/Modules/Compiler/MSVC.cmake
+D:/cmake/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake
+D:/cmake/share/cmake-3.27/Modules/Platform/Windows-MSVC-CXX.cmake
+D:/cmake/share/cmake-3.27/Modules/Platform/Windows-MSVC.cmake
+D:/cmake/share/cmake-3.27/Modules/Platform/Windows.cmake
+D:/cmake/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake
+N:/Dev/ElectromagneticSimulation/CMakeLists.txt
+N:/Dev/ElectromagneticSimulation/build/CMakeFiles/3.27.2/CMakeCXXCompiler.cmake
+N:/Dev/ElectromagneticSimulation/build/CMakeFiles/3.27.2/CMakeRCCompiler.cmake
+N:/Dev/ElectromagneticSimulation/build/CMakeFiles/3.27.2/CMakeSystem.cmake
+N:/Dev/ElectromagneticSimulation/build/CMakeFiles/cmake.verify_globs

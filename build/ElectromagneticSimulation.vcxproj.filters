@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\app_images.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\app_scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\d2d_resource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\field.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\particle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\rect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\simulation_app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\vector3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\app_images.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\app_scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\d2d_resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\field.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\particle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\simulation_app.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\vector3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="N:\Dev\ElectromagneticSimulation\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{91614692-D521-345E-8D9B-D00E7328F831}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{55AAA23E-D9D2-39BD-A130-CB8FC0C03DEC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
