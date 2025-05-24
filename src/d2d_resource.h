@@ -19,7 +19,8 @@ namespace simulation_app
 
     namespace graphics
     {
-        extern ID2D1SolidColorBrush* pParticleBrush;
+        extern ID2D1SolidColorBrush* pParticleSymbolBrush;
+        extern ID2D1SolidColorBrush* pParticleFillBrush;
         extern ID2D1SolidColorBrush* pFieldLineBrush;
         extern ID2D1SolidColorBrush* pFieldFillBrush;
         extern IDWriteTextFormat* pDefaultTextFormat;

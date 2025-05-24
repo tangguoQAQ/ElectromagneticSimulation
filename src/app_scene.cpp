@@ -37,6 +37,8 @@ namespace simulation_app
 
         scene->addParticle(std::make_shared<Particle>(
                 Vector3d{25, 10, 0}, Vector3d{0, 0, 0}, 1.0, -1.0));
+        scene->addParticle(std::make_shared<Particle>(
+                Vector3d{28, 15, 0}, Vector3d{0, 0, 0}, 1.0, +1.0));
 
         sceneManager.start();
     }
@@ -48,7 +50,7 @@ namespace simulation_app
 
     void renderScene()
     {
-        scene->dump();
+        // scene->dump();
         sceneManager.render();
     }
 

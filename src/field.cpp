@@ -36,7 +36,7 @@ namespace simulation_app
         
         // 计算电场线间距（均匀分布）
         constexpr float lineSpacing = 3.0f; // 可以调整这个值改变线密度 
-        int lineCount = static_cast<int>((rect.right  - rect.left)  / lineSpacing);
+        int lineCount = static_cast<int>((rect.right - rect.left - 1.5f)  / lineSpacing);
         
         // 根据电场方向决定是水平还是垂直分布电场线 
         bool isHorizontal = (fabsf(E.x) > fabsf(E.y));
@@ -48,12 +48,12 @@ namespace simulation_app
             
             if (isHorizontal) {
                 // 水平分布电场线（电场主要是X方向）
-                start = D2D1::Point2F(rect.left, rect.top  + i * lineSpacing);
-                end = D2D1::Point2F(rect.right, rect.top  + i * lineSpacing);
+                start = D2D1::Point2F(rect.left, rect.top + i * lineSpacing + 1.5f);
+                end = D2D1::Point2F(rect.right, rect.top + i * lineSpacing + 1.5f);
             } else {
                 // 垂直分布电场线（电场主要是Y方向）
-                start = D2D1::Point2F(rect.left + i * lineSpacing, rect.top); 
-                end = D2D1::Point2F(rect.left + i * lineSpacing, rect.bottom); 
+                start = D2D1::Point2F(rect.left + i * lineSpacing + 1.5f, rect.top); 
+                end = D2D1::Point2F(rect.left + i * lineSpacing + 1.5f, rect.bottom); 
             }
             
             // 绘制电场线 
@@ -81,6 +81,7 @@ namespace simulation_app
 
     void ElectricField::render() const
     {
+        graphics::pFieldFillBrush->SetColor(D2D1::ColorF(D2D1::ColorF::Yellow, 0.06f));
         pRenderTarget->FillRectangle(range_.toD2D(), graphics::pFieldFillBrush);
         renderElectricFieldLinesWithArrows(range_, E_);
     }
@@ -97,7 +98,7 @@ namespace simulation_app
 
     void renderMagneticField(const Rect& rect, const Vector3d& B)
     {
-        bool isCross = (B.z < 0.0f);
+        bool isCross = (B.z > 0.0f);
 
         const float cellSize = 2.0f;      // 单元格大小（控制符号间距）
         const float symbolSize = 0.3f;     // 符号大小（线段长度的一半）
@@ -137,6 +138,7 @@ namespace simulation_app
 
     void MagneticField::render() const
     {
+        graphics::pFieldFillBrush->SetColor(D2D1::ColorF(D2D1::ColorF::Green, 0.06f));
         pRenderTarget->FillRectangle(range_.toD2D(), graphics::pFieldFillBrush);
         renderMagneticField(range_, B_);
     }

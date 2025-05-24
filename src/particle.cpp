@@ -1,4 +1,6 @@
-﻿#include "particle.h"
+﻿#include <d2d1.h>
+
+#include "particle.h"
 #include "vector3d.h"
 #include "d2d_resource.h"
 
@@ -30,10 +32,32 @@ namespace simulation_app
 
     void Particle::render() const
     {
+        graphics::pParticleFillBrush->SetColor(D2D1::ColorF(
+            isPositive() ? D2D1::ColorF::Red : D2D1::ColorF::Blue));
         pRenderTarget->FillEllipse(D2D1::Ellipse(
-            D2D1::Point2F(pos_.x, pos_.y),
-            0.2, 0.2),
-            graphics::pParticleBrush);
+            D2D1::Point2F(pos_.x, pos_.y), 0.3f, 0.3f),
+            graphics::pParticleFillBrush);
+        
+        if(isPositive())
+        {
+            pRenderTarget->DrawLine(D2D1::Point2F(pos_.x - 0.2, pos_.y),
+                D2D1::Point2F(pos_.x + 0.2, pos_.y),
+                graphics::pParticleSymbolBrush, 0.1f);
+            pRenderTarget->DrawLine(D2D1::Point2F(pos_.x, pos_.y + 0.2),
+                D2D1::Point2F(pos_.x, pos_.y - 0.2),
+                graphics::pParticleSymbolBrush, 0.1f);
+        }
+        else
+        {            
+            pRenderTarget->DrawLine(D2D1::Point2F(pos_.x - 0.2, pos_.y),
+                D2D1::Point2F(pos_.x + 0.2, pos_.y),
+                graphics::pParticleSymbolBrush, 0.1f);
+        }
+    }
+
+    bool Particle::isPositive() const
+    {
+        return q > 0;
     }
 
     

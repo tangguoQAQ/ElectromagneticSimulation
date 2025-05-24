@@ -91,7 +91,9 @@ namespace simulation_app
 
     void SceneManager::render()
     {
-        scene_->render();
+        if(is_running_) {
+            scene_->render();
+        }
     }
 
 }

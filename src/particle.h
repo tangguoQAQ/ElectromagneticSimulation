@@ -40,6 +40,10 @@ namespace simulation_app
         void update(double dt, const FieldArgs& fieldArgs);
 
         void render() const;
+
+    private:
+        bool isPositive() const;
+        
     };
 
 } // namespace simulation_app

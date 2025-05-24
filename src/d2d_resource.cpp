@@ -39,7 +39,7 @@ namespace simulation_app
             D2D1::HwndRenderTargetProperties(hSimulationAppWindow, renderTargetSize),
             &pRenderTarget
         ));
-        pRenderTarget->SetTransform(D2D1::Matrix3x2F::Scale(10, 10));
+        pRenderTarget->SetTransform(D2D1::Matrix3x2F::Scale(20, 20));
 
         check_hresult(DWriteCreateFactory(
             DWRITE_FACTORY_TYPE_SHARED, __uuidof(IDWriteFactory), reinterpret_cast<IUnknown**>(&pDWriteFactory)));
@@ -67,16 +67,18 @@ namespace simulation_app
 
     namespace graphics
     {
-        ID2D1SolidColorBrush* pParticleBrush{nullptr};
+        ID2D1SolidColorBrush* pParticleSymbolBrush{nullptr};
+        ID2D1SolidColorBrush* pParticleFillBrush{nullptr};
         ID2D1SolidColorBrush* pFieldLineBrush{nullptr};
         ID2D1SolidColorBrush* pFieldFillBrush{nullptr};
         IDWriteTextFormat* pDefaultTextFormat{nullptr};
 
         void initializeGraphics()
         {
-            check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::Black), &pParticleBrush));
+            check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::White), &pParticleSymbolBrush));
+            check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::Red), &pParticleFillBrush));
             check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::DarkSlateGray), &pFieldLineBrush));
-            check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF(D2D1::ColorF::Green, 0.2F)), &pFieldFillBrush));
+            check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF(D2D1::ColorF::Green, 0.06f)), &pFieldFillBrush));
 
             check_hresult(pDWriteFactory->CreateTextFormat(
                 L"Microsoft YaHei",
@@ -92,7 +94,8 @@ namespace simulation_app
 
         void uninitializeGraphics()
         {
-            SafeRelease(&pParticleBrush);
+            SafeRelease(&pParticleSymbolBrush);
+            SafeRelease(&pParticleFillBrush);
             SafeRelease(&pFieldLineBrush);
             SafeRelease(&pFieldFillBrush);
             SafeRelease(&pDefaultTextFormat);
