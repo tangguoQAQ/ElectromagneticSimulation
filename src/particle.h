@@ -13,6 +13,7 @@ namespace simulation_app
         Vector3d v;  // m/s
         double m;        // kg
         double q;      // C
+        bool is_fixed_ = false;
 
     public:
         Particle(const Vector3d& position, const Vector3d& velocity, double mass, double charge);
@@ -40,6 +41,16 @@ namespace simulation_app
         void update(double dt, const FieldArgs& fieldArgs);
 
         void render() const;
+
+        inline bool isFixed() const
+        {
+            return is_fixed_;
+        }
+
+        inline void setFixed(bool isFixed)
+        {
+            is_fixed_ = isFixed;
+        }
 
     private:
         bool isPositive() const;

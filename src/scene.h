@@ -6,6 +6,7 @@
 
 #include "particle.h"
 #include "field.h"
+#include "barrier.h"
 
 namespace simulation_app
 {
@@ -14,6 +15,7 @@ namespace simulation_app
     private:
         std::vector<std::shared_ptr<Particle>> particles_;
         std::vector<std::shared_ptr<Field>> fields_;
+        std::vector<std::shared_ptr<Barrier>> barriers_;
 
         FieldArgs Scene::getFieldArgs(Vector3d position);
 
@@ -21,6 +23,8 @@ namespace simulation_app
         void addParticle(std::shared_ptr<Particle> particle);
 
         void addField(std::shared_ptr<Field> field);
+
+        void addBarrier(std::shared_ptr<Barrier> barrier);
         
         void update(double dt);
 

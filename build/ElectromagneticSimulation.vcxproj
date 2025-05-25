@@ -321,6 +321,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\app_images.h" />
     <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\app_scene.cpp" />
     <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\app_scene.h" />
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\barrier.cpp" />
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\barrier.h" />
     <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\d2d_resource.cpp" />
     <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\d2d_resource.h" />
     <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\field.cpp" />

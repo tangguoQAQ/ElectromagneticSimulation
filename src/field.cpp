@@ -100,9 +100,9 @@ namespace simulation_app
     {
         bool isCross = (B.z > 0.0f);
 
-        const float cellSize = 2.0f;      // 单元格大小（控制符号间距）
-        const float symbolSize = 0.3f;     // 符号大小（线段长度的一半）
-        const float strokeWidth = 0.1f;    // 线段宽度
+        constexpr float cellSize = 3.0f;      // 单元格大小（控制符号间距）
+        constexpr float symbolSize = 0.3f;     // 符号大小（线段长度的一半）
+        constexpr float strokeWidth = 0.1f;    // 线段宽度
 
         for (float y = rect.top  + cellSize / 2; y < rect.bottom;  y += cellSize)
         {

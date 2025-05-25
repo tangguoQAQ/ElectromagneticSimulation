@@ -1,5 +1,7 @@
 ﻿#include <cmath>
 
+#include <d2d1.h>
+
 #include "vector3d.h"
 
 namespace simulation_app
@@ -64,6 +66,11 @@ namespace simulation_app
             x /= len;
             y /= len;
         }
+    }
+
+    D2D1_POINT_2F Vector3d::toD2D() const
+    {
+        return D2D1::Point2F(x, y);
     }
     
 } // namespace simulation_app

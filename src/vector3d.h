@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include <d2d1.h>
+
 namespace simulation_app
 {
     struct Vector3d
@@ -27,6 +29,8 @@ namespace simulation_app
         float lengthSquared() const;
 
         void normalize();
+
+        D2D1_POINT_2F toD2D() const;
         
     };
     

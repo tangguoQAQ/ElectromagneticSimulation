@@ -71,6 +71,7 @@ namespace simulation_app
         ID2D1SolidColorBrush* pParticleFillBrush{nullptr};
         ID2D1SolidColorBrush* pFieldLineBrush{nullptr};
         ID2D1SolidColorBrush* pFieldFillBrush{nullptr};
+        ID2D1SolidColorBrush* pBarrierBrush{nullptr};
         IDWriteTextFormat* pDefaultTextFormat{nullptr};
 
         void initializeGraphics()
@@ -79,6 +80,7 @@ namespace simulation_app
             check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::Red), &pParticleFillBrush));
             check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::DarkSlateGray), &pFieldLineBrush));
             check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF(D2D1::ColorF::Green, 0.06f)), &pFieldFillBrush));
+            check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::Black), &pBarrierBrush));
 
             check_hresult(pDWriteFactory->CreateTextFormat(
                 L"Microsoft YaHei",
@@ -98,6 +100,7 @@ namespace simulation_app
             SafeRelease(&pParticleFillBrush);
             SafeRelease(&pFieldLineBrush);
             SafeRelease(&pFieldFillBrush);
+            SafeRelease(&pBarrierBrush);
             SafeRelease(&pDefaultTextFormat);
         }
     } // namespace graphics

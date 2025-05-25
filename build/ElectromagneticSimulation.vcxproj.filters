@@ -7,6 +7,9 @@
     <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\app_scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\barrier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="N:\Dev\ElectromagneticSimulation\src\d2d_resource.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -37,6 +40,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\app_scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\barrier.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="N:\Dev\ElectromagneticSimulation\src\d2d_resource.h">

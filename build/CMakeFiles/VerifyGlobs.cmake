@@ -7,6 +7,7 @@ file(GLOB NEW_GLOB LIST_DIRECTORIES true "N:/Dev/ElectromagneticSimulation/./src
 set(OLD_GLOB
   "N:/Dev/ElectromagneticSimulation/./src/app_images.cpp"
   "N:/Dev/ElectromagneticSimulation/./src/app_scene.cpp"
+  "N:/Dev/ElectromagneticSimulation/./src/barrier.cpp"
   "N:/Dev/ElectromagneticSimulation/./src/d2d_resource.cpp"
   "N:/Dev/ElectromagneticSimulation/./src/field.cpp"
   "N:/Dev/ElectromagneticSimulation/./src/main.cpp"
@@ -26,6 +27,7 @@ file(GLOB NEW_GLOB LIST_DIRECTORIES true "N:/Dev/ElectromagneticSimulation/./src
 set(OLD_GLOB
   "N:/Dev/ElectromagneticSimulation/./src/app_images.h"
   "N:/Dev/ElectromagneticSimulation/./src/app_scene.h"
+  "N:/Dev/ElectromagneticSimulation/./src/barrier.h"
   "N:/Dev/ElectromagneticSimulation/./src/d2d_resource.h"
   "N:/Dev/ElectromagneticSimulation/./src/field.h"
   "N:/Dev/ElectromagneticSimulation/./src/particle.h"

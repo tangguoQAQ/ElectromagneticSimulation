@@ -17,6 +17,11 @@ namespace simulation_app
         fields_.push_back(field);
     }
 
+    void Scene::addBarrier(std::shared_ptr<Barrier> barrier)
+    {
+        barriers_.push_back(barrier);
+    }
+
     FieldArgs Scene::getFieldArgs(Vector3d position)
     {
         FieldArgs result{};
@@ -36,6 +41,20 @@ namespace simulation_app
     {
         for(auto& particle : particles_)
         {
+            if(particle->isFixed())
+            {
+                continue;
+            }
+
+            for(const auto& barrier : barriers_)
+            {
+                if(barrier->contains(particle->getPos()))
+                {
+                    particle->setFixed(true);
+                    break;
+                }
+            }
+
             particle->update(dt, getFieldArgs(particle->getPos()));
         }
     }
@@ -52,6 +71,10 @@ namespace simulation_app
 
     void Scene::render()
     {
+        for(auto& barrier : barriers_)
+        {
+            barrier->render();
+        }
         for(auto& field : fields_)
         {
             field->render();
