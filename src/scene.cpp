@@ -51,6 +51,7 @@ namespace simulation_app
                 if(barrier->contains(particle->getPos()))
                 {
                     particle->setFixed(true);
+                    barrier->callOnParticleFixed(particle);
                     break;
                 }
             }

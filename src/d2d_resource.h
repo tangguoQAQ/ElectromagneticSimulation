@@ -23,7 +23,7 @@ namespace simulation_app
         extern ID2D1SolidColorBrush* pParticleFillBrush;
         extern ID2D1SolidColorBrush* pFieldLineBrush;
         extern ID2D1SolidColorBrush* pFieldFillBrush;
-        extern ID2D1SolidColorBrush* pBarrierBrush;
+        extern ID2D1SolidColorBrush* pBlackBrush;
         extern IDWriteTextFormat* pDefaultTextFormat;
         
         void initializeGraphics();

@@ -39,7 +39,7 @@ namespace simulation_app
             D2D1::HwndRenderTargetProperties(hSimulationAppWindow, renderTargetSize),
             &pRenderTarget
         ));
-        pRenderTarget->SetTransform(D2D1::Matrix3x2F::Scale(20, 20));
+        pRenderTarget->SetTransform(D2D1::Matrix3x2F::Scale(100, 100));
 
         check_hresult(DWriteCreateFactory(
             DWRITE_FACTORY_TYPE_SHARED, __uuidof(IDWriteFactory), reinterpret_cast<IUnknown**>(&pDWriteFactory)));
@@ -71,7 +71,7 @@ namespace simulation_app
         ID2D1SolidColorBrush* pParticleFillBrush{nullptr};
         ID2D1SolidColorBrush* pFieldLineBrush{nullptr};
         ID2D1SolidColorBrush* pFieldFillBrush{nullptr};
-        ID2D1SolidColorBrush* pBarrierBrush{nullptr};
+        ID2D1SolidColorBrush* pBlackBrush{nullptr};
         IDWriteTextFormat* pDefaultTextFormat{nullptr};
 
         void initializeGraphics()
@@ -80,15 +80,15 @@ namespace simulation_app
             check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::Red), &pParticleFillBrush));
             check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::DarkSlateGray), &pFieldLineBrush));
             check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF(D2D1::ColorF::Green, 0.06f)), &pFieldFillBrush));
-            check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::Black), &pBarrierBrush));
+            check_hresult(pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::Black), &pBlackBrush));
 
             check_hresult(pDWriteFactory->CreateTextFormat(
-                L"Microsoft YaHei",
+                L"Times New Roman",
                 nullptr,
                 DWRITE_FONT_WEIGHT_REGULAR,
                 DWRITE_FONT_STYLE_NORMAL,
                 DWRITE_FONT_STRETCH_NORMAL,
-                72.0f,
+                0.16f,
                 L"zh-cn",
                 &pDefaultTextFormat
             ));
@@ -100,7 +100,7 @@ namespace simulation_app
             SafeRelease(&pParticleFillBrush);
             SafeRelease(&pFieldLineBrush);
             SafeRelease(&pFieldFillBrush);
-            SafeRelease(&pBarrierBrush);
+            SafeRelease(&pBlackBrush);
             SafeRelease(&pDefaultTextFormat);
         }
     } // namespace graphics

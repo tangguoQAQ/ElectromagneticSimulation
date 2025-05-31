@@ -47,7 +47,7 @@ namespace simulation_app
         void updateThread();
 
     public:
-        SceneManager(std::shared_ptr<Scene> scene, double dt = 1e-7, int interval_seconds = 50);
+        SceneManager(std::shared_ptr<Scene> scene, double dt = 1e-8, int interval_seconds = 1);
 
         inline std::shared_ptr<Scene> getScene() const
         {

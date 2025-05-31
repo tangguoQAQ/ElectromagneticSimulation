@@ -1,10 +1,13 @@
 ﻿#include "barrier.h"
 #include "d2d_resource.h"
+#include "particle.h"
+#include <memory>
+#include <functional>
 
 namespace simulation_app
 {
-    Barrier::Barrier(const Vector3d& start_pos, const Vector3d& end_pos)
-        : start_pos_(start_pos), end_pos_(end_pos)
+    Barrier::Barrier(const Vector3d& start_pos, const Vector3d& end_pos, std::function<void(std::shared_ptr<Particle>)> barrier_func)
+        : start_pos_(start_pos), end_pos_(end_pos), on_particle_fixed_func_(barrier_func)
     {
     }
 
@@ -20,12 +23,17 @@ namespace simulation_app
         }
     
         const Vector3d proj = start_pos_ + line * t;
-        return (pos - proj).lengthSquared() <= (0.2 * 0.2 / 4);
+        return (pos - proj).lengthSquared() <= (0.04 * 0.04 / 4);
     }
 
     void Barrier::render() const
     {
-        pRenderTarget->DrawLine(start_pos_.toD2D(), end_pos_.toD2D(), graphics::pBarrierBrush, 0.2f);
+        pRenderTarget->DrawLine(start_pos_.toD2D(), end_pos_.toD2D(), graphics::pBlackBrush, 0.04f);
+    }
+
+    void Barrier::callOnParticleFixed(std::shared_ptr<Particle> particle) const
+    {
+        on_particle_fixed_func_(particle);
     }
 
 } // namespace simulation_app

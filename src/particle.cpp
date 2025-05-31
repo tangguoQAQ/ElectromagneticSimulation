@@ -11,6 +11,11 @@ namespace simulation_app
     {
     }
 
+    Particle::Particle(const Vector3d& position, const Vector3d& velocity, double mass_to_charge_ratio)
+        : pos_(position), v(velocity), m(mass_to_charge_ratio * constant::u), q(constant::e)
+    {
+    }
+
     void Particle::update(double dt, const FieldArgs& fieldArgs)
     {
         const Vector3d& E = fieldArgs.E,
@@ -18,7 +23,7 @@ namespace simulation_app
 
         v += ((E * q) / m) * (dt/2.0);
 
-        const Vector3d t = (B * q) / 2*m * dt;
+        const Vector3d t = (B * q) / (2*m) * dt;
         const Vector3d s = t*2 / (1 + t.dot(t));
 
         const Vector3d v_minus = v; 
@@ -35,23 +40,23 @@ namespace simulation_app
         graphics::pParticleFillBrush->SetColor(D2D1::ColorF(
             isPositive() ? D2D1::ColorF::Red : D2D1::ColorF::Blue));
         pRenderTarget->FillEllipse(D2D1::Ellipse(
-            D2D1::Point2F(pos_.x, pos_.y), 0.3f, 0.3f),
+            D2D1::Point2F(pos_.x, pos_.y), 0.06f, 0.06f),
             graphics::pParticleFillBrush);
         
         if(isPositive())
         {
-            pRenderTarget->DrawLine(D2D1::Point2F(pos_.x - 0.2, pos_.y),
-                D2D1::Point2F(pos_.x + 0.2, pos_.y),
-                graphics::pParticleSymbolBrush, 0.1f);
-            pRenderTarget->DrawLine(D2D1::Point2F(pos_.x, pos_.y + 0.2),
-                D2D1::Point2F(pos_.x, pos_.y - 0.2),
-                graphics::pParticleSymbolBrush, 0.1f);
+            pRenderTarget->DrawLine(D2D1::Point2F(pos_.x - 0.04, pos_.y),
+                D2D1::Point2F(pos_.x + 0.04, pos_.y),
+                graphics::pParticleSymbolBrush, 0.02f);
+            pRenderTarget->DrawLine(D2D1::Point2F(pos_.x, pos_.y + 0.04),
+                D2D1::Point2F(pos_.x, pos_.y - 0.04),
+                graphics::pParticleSymbolBrush, 0.02f);
         }
         else
         {            
-            pRenderTarget->DrawLine(D2D1::Point2F(pos_.x - 0.2, pos_.y),
-                D2D1::Point2F(pos_.x + 0.2, pos_.y),
-                graphics::pParticleSymbolBrush, 0.1f);
+            pRenderTarget->DrawLine(D2D1::Point2F(pos_.x - 0.04, pos_.y),
+                D2D1::Point2F(pos_.x + 0.04, pos_.y),
+                graphics::pParticleSymbolBrush, 0.02f);
         }
     }
 

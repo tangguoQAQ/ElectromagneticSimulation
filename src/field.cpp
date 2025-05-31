@@ -32,11 +32,11 @@ namespace simulation_app
     {
         // 计算电场方向角度（忽略Z轴）
         float angle = atan2f(E.y, E.x);
-        constexpr float arrowSize = 0.8f;
+        constexpr float arrowSize = 0.16f;
         
         // 计算电场线间距（均匀分布）
-        constexpr float lineSpacing = 3.0f; // 可以调整这个值改变线密度 
-        int lineCount = static_cast<int>((rect.right - rect.left - 1.5f)  / lineSpacing);
+        constexpr float lineSpacing = 0.5f; // 可以调整这个值改变线密度 
+        int lineCount = static_cast<int>((rect.right - rect.left - lineSpacing/2)  / lineSpacing);
         
         // 根据电场方向决定是水平还是垂直分布电场线 
         bool isHorizontal = (fabsf(E.x) > fabsf(E.y));
@@ -48,16 +48,16 @@ namespace simulation_app
             
             if (isHorizontal) {
                 // 水平分布电场线（电场主要是X方向）
-                start = D2D1::Point2F(rect.left, rect.top + i * lineSpacing + 1.5f);
-                end = D2D1::Point2F(rect.right, rect.top + i * lineSpacing + 1.5f);
+                start = D2D1::Point2F(rect.left, rect.top + i * lineSpacing + lineSpacing/2);
+                end = D2D1::Point2F(rect.right, rect.top + i * lineSpacing + lineSpacing/2);
             } else {
                 // 垂直分布电场线（电场主要是Y方向）
-                start = D2D1::Point2F(rect.left + i * lineSpacing + 1.5f, rect.top); 
-                end = D2D1::Point2F(rect.left + i * lineSpacing + 1.5f, rect.bottom); 
+                start = D2D1::Point2F(rect.left + i * lineSpacing + lineSpacing/2, rect.top); 
+                end = D2D1::Point2F(rect.left + i * lineSpacing + lineSpacing/2, rect.bottom); 
             }
             
             // 绘制电场线 
-            pRenderTarget->DrawLine(start, end, graphics::pFieldLineBrush, 0.1f);
+            pRenderTarget->DrawLine(start, end, graphics::pFieldLineBrush, 0.02f);
             
             // 计算箭头位置（线段中点）
             D2D1_POINT_2F arrowPos = D2D1::Point2F(
@@ -74,8 +74,8 @@ namespace simulation_app
                 arrowPos.y - arrowSize * sinf(angle - 0.3f));
             
             // 绘制箭头（两条线形成三角形）
-            pRenderTarget->DrawLine(arrowPos, arrow1, graphics::pFieldLineBrush, 0.1f);
-            pRenderTarget->DrawLine(arrowPos, arrow2, graphics::pFieldLineBrush, 0.1f);
+            pRenderTarget->DrawLine(arrowPos, arrow1, graphics::pFieldLineBrush, 0.02f);
+            pRenderTarget->DrawLine(arrowPos, arrow2, graphics::pFieldLineBrush, 0.02f);
         }
     }
 
@@ -100,9 +100,9 @@ namespace simulation_app
     {
         bool isCross = (B.z > 0.0f);
 
-        constexpr float cellSize = 3.0f;      // 单元格大小（控制符号间距）
-        constexpr float symbolSize = 0.3f;     // 符号大小（线段长度的一半）
-        constexpr float strokeWidth = 0.1f;    // 线段宽度
+        constexpr float cellSize = 0.6f;      // 单元格大小（控制符号间距）
+        constexpr float symbolSize = 0.06f;     // 符号大小（线段长度的一半）
+        constexpr float strokeWidth = 0.02f;    // 线段宽度
 
         for (float y = rect.top  + cellSize / 2; y < rect.bottom;  y += cellSize)
         {

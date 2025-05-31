@@ -5,6 +5,12 @@
 
 namespace simulation_app
 {
+    namespace constant
+    {
+        constexpr double u = 1.66053886e-27; // 统一原子质量单位
+        constexpr double e = 1.60217662e-19; // 元电荷
+    }
+
     struct FieldArgs;
 
     class Particle {
@@ -17,6 +23,8 @@ namespace simulation_app
 
     public:
         Particle(const Vector3d& position, const Vector3d& velocity, double mass, double charge);
+
+        Particle(const Vector3d& position, const Vector3d& velocity, double mass_to_charge_ratio);
 
         inline const Vector3d& getPos() const
         {
@@ -36,6 +44,11 @@ namespace simulation_app
         inline double getQ() const
         {
             return q;
+        }
+
+        inline double getMassToChargeRatio() const
+        {
+            return (m/constant::u) / (q/constant::e);
         }
 
         void update(double dt, const FieldArgs& fieldArgs);
