@@ -92,12 +92,12 @@ namespace simulation_app
         {
             scene_->update(dt_);
 
-            std::this_thread::sleep_for(std::chrono::milliseconds(interval_seconds_));
+            std::this_thread::sleep_for(std::chrono::milliseconds(interval_milliseconds_));
         }
     }
 
     SceneManager::SceneManager(std::shared_ptr<Scene> scene, double dt, int interval_seconds)
-        : scene_(scene), dt_(dt), interval_seconds_(interval_seconds)
+        : scene_(scene), dt_(dt), interval_milliseconds_(interval_seconds)
     {
     }
 

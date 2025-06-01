@@ -17,7 +17,7 @@ namespace simulation_app
         std::vector<std::shared_ptr<Field>> fields_;
         std::vector<std::shared_ptr<Barrier>> barriers_;
 
-        FieldArgs Scene::getFieldArgs(Vector3d position);
+        FieldArgs getFieldArgs(Vector3d position);
 
     public:
         void addParticle(std::shared_ptr<Particle> particle);
@@ -37,7 +37,7 @@ namespace simulation_app
     {
     private:
         const double dt_;    // s
-        const int interval_seconds_;  // ms
+        const int interval_milliseconds_;  // ms
         bool is_running_ = false;
 
         const std::shared_ptr<Scene> scene_;
@@ -47,7 +47,7 @@ namespace simulation_app
         void updateThread();
 
     public:
-        SceneManager(std::shared_ptr<Scene> scene, double dt = 1e-8, int interval_seconds = 1);
+        SceneManager(std::shared_ptr<Scene> scene, double dt = 1e-8, int interval_milliseconds = 1);
 
         inline std::shared_ptr<Scene> getScene() const
         {

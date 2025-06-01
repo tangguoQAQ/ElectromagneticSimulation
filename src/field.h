@@ -27,7 +27,7 @@ namespace simulation_app
 
         virtual void addToArgs(FieldArgs& args) const = 0;
 
-        bool contains(Vector3d position);
+        bool contains(Vector3d position) const;
 
         virtual void render() const = 0;
     };

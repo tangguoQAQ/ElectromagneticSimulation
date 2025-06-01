@@ -13,7 +13,7 @@ namespace simulation_app
     {
     }
     
-    bool Field::contains(Vector3d position)
+    bool Field::contains(Vector3d position) const
     {
         return range_.contains(position.x, position.y);
     }

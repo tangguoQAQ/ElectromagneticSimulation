@@ -18,8 +18,7 @@ namespace simulation_app
 
     void Particle::update(double dt, const FieldArgs& fieldArgs)
     {
-        const Vector3d& E = fieldArgs.E,
-                B = fieldArgs.B;
+        const Vector3d& E = fieldArgs.E, B = fieldArgs.B;
 
         v += ((E * q) / m) * (dt/2.0);
 

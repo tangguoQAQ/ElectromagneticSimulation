@@ -13,12 +13,13 @@ namespace simulation_app
 
     struct FieldArgs;
 
-    class Particle {
+    class Particle
+    {
     private:
         Vector3d pos_;  // m
         Vector3d v;  // m/s
-        double m;        // kg
-        double q;      // C
+        double m;   // kg
+        double q;   // C
         bool is_fixed_ = false;
 
     public:
