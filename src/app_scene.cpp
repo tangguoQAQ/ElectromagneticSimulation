@@ -18,8 +18,8 @@ namespace simulation_app
 {
     std::shared_ptr<Scene> scene = std::make_shared<Scene>();
     SceneManager sceneManager{scene};
-    double U{3000},
-            B{std::sqrt((2.0 * U * 46 * constant::u) / constant::e) / 2.0};
+    const double U{3000},
+            B{std::sqrt((2.0 * U * 46.0 * constant::u) / (std::pow(2.0, 2) * constant::e))};
 
     bool hasInitialized = false;
 
@@ -49,15 +49,15 @@ namespace simulation_app
         
         // 偏转磁场
         scene->addField(std::make_shared<MagneticField>(
-                Rect{0.0, 2.7, 6.0, 8.0}, Vector3d{0.0, 0.0, -B}));
+                Rect{0.0, 2.7, 6.0, 8.0}, Vector3d{-0.0, 0.0, -B}));
         
         scene->addBarrier(std::make_shared<Barrier>(
-                Vector3d{0.0, 2.65, 0.0}, Vector3d{3.95, 2.65, 0.0}, onParticleFixed));
+                Vector3d{-0.1, 2.65, 0.0}, Vector3d{3.95, 2.65, 0.0}, onParticleFixed));
     }
 
     void generateIons()
     {
-        const struct {
+        constexpr struct {
             double massToChargeRatio, relativeAbundance;
         } ionsDatas[] = {
             {14.0, 1.4},

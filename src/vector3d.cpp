@@ -60,12 +60,9 @@ namespace simulation_app
         return x * x + y * y;
     }
 
-    void Vector3d::normalize() { 
+    Vector3d Vector3d::normalize() const { 
         float len = std::sqrt(lengthSquared());
-        if (len > 0.0f) {
-            x /= len;
-            y /= len;
-        }
+        return Vector3d(x / len, y / len, z / len);
     }
 
     D2D1_POINT_2F Vector3d::toD2D() const

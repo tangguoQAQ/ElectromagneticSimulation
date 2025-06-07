@@ -57,16 +57,20 @@ namespace simulation_app
             }
 
             particle->update(dt, getFieldArgs(particle->getPos()));
+            // dump();
         }
     }
 
     void Scene::dump()
     {
-        std::cout << "Scene dump:" << std::endl;
+        // std::cout << "Scene dump:" << std::endl;
         for(auto& particle : particles_)
         {
+            if(particle->getM() != 46 * constant::u) continue;
+            if(particle->getPos().y < 2.5) continue;
             std::cout << "Particle: " << &particle << " pos: "
-                    << particle->getPos().x << " " << particle->getPos().y << " " << particle->getPos().z << std::endl;
+                    << particle->getPos().x << " " << particle->getPos().y << " " << particle->getPos().z
+                    << " v: " << particle->getV().lengthSquared() << " " << particle->getV().x << " " << particle->getV().y << " " << particle->getV().z << std::endl;
         }
     }
 

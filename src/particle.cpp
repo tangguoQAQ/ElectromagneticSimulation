@@ -24,10 +24,8 @@ namespace simulation_app
 
         const Vector3d t = (B * q) / (2*m) * dt;
         const Vector3d s = t*2 / (1 + t.dot(t));
-
-        const Vector3d v_minus = v; 
-        const Vector3d v_prime = v_minus + v_minus.cross(t); 
-        v = v_minus + v_prime.cross(s); 
+        const Vector3d v_prime = v + v.cross(t);
+        v += v_prime.cross(s);
 
         v += ((E * q) / m) * (dt/2.0);
 

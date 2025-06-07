@@ -8,7 +8,7 @@ namespace simulation_app
     namespace constant
     {
         constexpr double u = 1.66053886e-27; // 统一原子质量单位
-        constexpr double e = 1.60217662e-19; // 元电荷
+        constexpr double e = 1.602176634e-19; // 元电荷
     }
 
     struct FieldArgs;

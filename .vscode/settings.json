@@ -75,7 +75,8 @@
         "memory_resource": "cpp",
         "string_view": "cpp",
         "fstream": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "bitset": "cpp"
     },
     "files.encoding": "utf8bom",
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",

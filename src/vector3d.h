@@ -28,7 +28,7 @@ namespace simulation_app
 
         float lengthSquared() const;
 
-        void normalize();
+        Vector3d normalize() const;
 
         D2D1_POINT_2F toD2D() const;
         
